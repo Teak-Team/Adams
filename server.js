@@ -3,15 +3,18 @@ const app = express();
 const http = require('http');
 const server = http.createServer(app);
 const ejs = require('ejs')
+const path = require("path");
 
-const port = 80
+const PORT = 8080
+
+app.set("views",path.join(__dirname, 'views'))
+app.set("view engine","ejs")
 
 app.get('/', (req, res) => {
     const bozs = ["you","i","ship"]
-    const htmlResult = ejs.renderFile("template.ejs",{persons : bozs})
-    res.send(htmlResult)
+    res.render('index',{persons : bozs})
 });
 
-server.listen(port, () => {
-    console.log(`adams listen on ${port}`);
+server.listen(PORT, () => {
+    console.log(`adams listen on ${PORT}`);
 });
