@@ -28,6 +28,10 @@ app.get('/', (req, res) => {
 });
 
 
+app.post('/',(req, res) => {
+
+})
+
 
 server.listen(configs.PORT, () => {
     console.log(`adams listen on ${configs.PORT}`);
