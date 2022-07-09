@@ -13,10 +13,6 @@ const schemes = require('./db/schemes')
 const Realm = require('realm')
 const { ObjectId } = require('bson')
 
-//socket
-const { Server } = require("socket.io");
-const io = new Server(server);
-
 
 
 //express conf
@@ -25,17 +21,13 @@ app.set("view engine","ejs")
 app.use(bodyParser.urlencoded({extended: true}));
 
 
-//socket
-io.on('connection',(socket) => {
-
-})
-
-
 
 app.get('/', (req, res) => {
     const bozs = ["you","i","ship"]
     res.render('index',{persons : bozs})
 });
+
+
 
 server.listen(configs.PORT, () => {
     console.log(`adams listen on ${configs.PORT}`);

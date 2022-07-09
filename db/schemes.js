@@ -1,5 +1,26 @@
 module.exports = class schemes {
 
+
+    static FolderSchema = {
+        name : 'Folders',
+        properties : {
+            _id : "",
+            name : "",
+            pass : ""
+        }
+    }
+
+    static PageSchema = {
+        name : 'Pages',
+        properties : {
+            _id : "",
+            title : "",
+            content : ""
+        }
+    }
+
+
+
     /*static PostSchema = {
         name: 'Post',
         properties: {
