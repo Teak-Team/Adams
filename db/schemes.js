@@ -1,23 +1,45 @@
 module.exports = class schemes {
 
-
     static FolderSchema = {
         name : 'Folders',
         properties : {
-            _id : "",
-            name : "",
-            pass : ""
+            _id : "objectId",
+            name : "string",
+            pass : "string"
         }
     }
 
     static PageSchema = {
         name : 'Pages',
         properties : {
-            _id : "",
-            title : "",
-            content : ""
+            _id : "objectId",
+            title : "string",
+            content : "string"
         }
     }
+
+    static UserSchema = {
+        name : 'Users',
+        properties : {
+            _id : "objectId",
+            name : "string",
+            username : "string",
+            pass : "string"
+        }
+    }
+
+    static LogSchema = {
+        name : 'Logs',
+        properties : {
+            _id : "objectId",
+            userId : "string",
+            pageId : "string",
+            pass : "string",
+            date : "int"
+        }
+    }
+
+
 
 
 
